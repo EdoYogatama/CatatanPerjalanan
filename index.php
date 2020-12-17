@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    $login = false;
+    if(isset($_SESSION['idx'])){
+        $login = true;
+    }    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +25,43 @@
                 <a href="View/History.php" class="btn btn-link">History</a>
             </section>
             <section class="navbar-section">
-                <button class="btn btn-primary" onclick="location.href='View/SignIn.php';">Sign In</button>
+                <?php
+                    if($login){
+                ?>
+                    <button class="btn btn-primary" onclick="location.href='Backend/signout.php';">Sign Out</button>
+                <?php
+                    } else {
+                ?>
+                    <button class="btn btn-primary" onclick="location.href='View/SignIn.php';">Sign In</button>
+                <?php
+                    }
+            ?>
             </section>
         </header>
     </div>
     <section class="flex-centered hero">
         <div class="bg-secondary card col-xl-7 landingTitle">
-            <span class="text-primary h1 text-bold"> SELAMAT DATANG! </span>
+            <div class="text-primary h1 text-bold">
+                <?php
+                    if($login){
+                        echo "SELAMAT DATANG ".$_SESSION['uname'];
+                    } else {
+                        echo "SELAMAT DATANG!";
+                    }
+                ?>
+            </div>
+            <div class="h5 text-bold">
+                <?php
+                    if(isset($_GET['msg'])){
+                        $msg = $_GET['msg'];
+                        if($msg == "fail"){
+                            echo "Something Went Wrong";
+                        } else if($msg == "success") {
+                            echo "Sign Up Success";
+                        }
+                    }
+                ?>
+            </div>
         </div> <br>
         <button class="btn btn-primary" onclick="location.href='View/Upload.php';">Upload Image</button>
     </section>

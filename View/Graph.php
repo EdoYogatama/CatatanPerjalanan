@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    $login = false;
+    if(isset($_SESSION['idx'])){
+        $login = true;
+    }    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +26,17 @@
                 <a href="./History.php" class="btn btn-link">History</a>
             </section>
             <section class="navbar-section">
-                <button class="btn btn-primary" onclick="location.href='SignIn.php';">Sign In</button>
+            <?php
+                    if($login){
+                ?>
+                    <button class="btn btn-primary" onclick="location.href='Backend/signout.php';">Sign Out</button>
+                <?php
+                    } else {
+                ?>
+                    <button class="btn btn-primary" onclick="location.href='View/SignIn.php';">Sign In</button>
+                <?php
+                    }
+            ?>
             </section>
         </header>
     </div>

@@ -11,7 +11,7 @@
     if($cek>0){
         $data = mysqli_fetch_assoc($login);
         $_SESSION['uname'] = $uname;
-        $_SESSION['idx'] = $data['id'];
+        $_SESSION['idx'] = $data['id_user'];
         header("Location: ../index.php");
         mysqli_close($link);
         exit;
