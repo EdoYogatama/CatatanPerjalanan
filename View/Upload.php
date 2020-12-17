@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="Style/myLayout.css">
+    <link rel="stylesheet" href="../Style/myLayout.css">
     <title>Upload</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
     </div>
     <section class="form-group flex-centered">
         <form name="loginform" action="../Backend/upload.php" method="POST" onsubmit="return validating()">
-            <label class="form-label" for="foto">Foto</label>
+            <label class="form-label" for="foto">Image</label>
             <input class="form-input" type="file" name="foto" id="foto"> <br>
             <input class="btn btn-primary" type="submit" value="Upload">
         </form>

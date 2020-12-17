@@ -58,6 +58,14 @@
                             echo "Something Went Wrong";
                         } else if($msg == "success") {
                             echo "Sign Up Success";
+                        } else if($msg == "logreq"){
+                            echo "Login Required";
+                        } else if($msg == "dirfail"){
+                            echo "Fail Creating Folder";
+                        } else if($msg == "upfail"){
+                            echo "Failed to Upload";
+                        } else if($msg == up){
+                            echo "Upload Success";
                         }
                     }
                 ?>
