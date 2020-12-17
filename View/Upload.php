@@ -40,11 +40,20 @@
         </header>
     </div>
     <section class="form-group flex-centered">
-        <form name="loginform" action="../Backend/upload.php" method="POST" onsubmit="return validating(loginform)">
+        <form name="loginform" action="../Backend/upload.php" method="POST" onsubmit="return validating()">
             <label class="form-label" for="foto">Foto</label>
-            <input class="form-input" type="file" name="foto"> <br>
+            <input class="form-input" type="file" name="foto" id="foto"> <br>
             <input class="btn btn-primary" type="submit" value="Upload">
         </form>
     </section>
+    <script>
+        function validating(){
+            if( document.getElementById("foto").files.length === 0 ){
+                alert("no files selected");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
