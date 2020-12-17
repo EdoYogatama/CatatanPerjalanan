@@ -16,6 +16,7 @@
             <section class="navbar-section">
                 <a href="index.php" class="navbar-brand mr-2"><span class="text-bold">ODiaries</span></a>
                 <a href="#" class="btn btn-link">Graph</a>
+                <a href="./History.php" class="btn btn-link">History</a>
             </section>
             <section class="navbar-section">
                 <button class="btn btn-primary" onclick="location.href='SignIn.php';">Sign In</button>

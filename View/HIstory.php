@@ -22,24 +22,10 @@
             </section>
         </header>
     </div>
-    <section class="form-group flex-centered">
-        <form name="loginform" action="../Backend/signin.php" method="POST" onsubmit="return validating(loginform)">
-            <label class="form-label" for="uname">Username</label>
-            <input class="form-input" type="text" name="uname" id="uname">
-            <label class="form-label" for="pass">Password</label>
-            <input class="form-input" type="password" name="pass" id="pass"> <br>
-            <input class="btn btn-primary" type="submit" value="Sign In">
-        </form>
-        &nbsp or &nbsp<button class="btn" onclick="location.href='./SignUp.php';">Sign Up</button>
+    <section class="flex-centered hero">
+        <div class="bg-secondary card col-xl-7 landingTitle">
+            <span class="text-primary h1 text-bold"> LOG HISTORY </span>
+        </div>
     </section>
-    <script>
-        function validating(form){
-            if(form.uname.value=="" || form.pass.value==""){
-                alert("Uname or Password cant be empty");
-                return false;
-            }
-            return true;
-        }    
-    </script>
 </body>
 </html>

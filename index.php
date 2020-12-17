@@ -15,6 +15,7 @@
             <section class="navbar-section">
                 <a href="#" class="navbar-brand mr-2"><span class="text-bold">ODiaries</span></a>
                 <a href="View/Graph.php" class="btn btn-link">Graph</a>
+                <a href="View/History.php" class="btn btn-link">History</a>
             </section>
             <section class="navbar-section">
                 <button class="btn btn-primary" onclick="location.href='View/SignIn.php';">Sign In</button>
@@ -24,7 +25,8 @@
     <section class="flex-centered hero">
         <div class="bg-secondary card col-xl-7 landingTitle">
             <span class="text-primary h1 text-bold"> SELAMAT DATANG! </span>
-        </div>
+        </div> <br>
+        <button class="btn btn-primary" onclick="location.href='View/Upload.php';">Upload Image</button>
     </section>
 </body>
 </html>

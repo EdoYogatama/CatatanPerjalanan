@@ -5,7 +5,7 @@
     $uname = $_POST['uname'];
     $pass  = md5($_POST['pass']);
     $tablename = "user";
-    $sqlstr = "INSERT INTO $tablename(email,username,password) VALUES('$email','$uname','$pass')";
+    $sqlstr = "INSERT INTO $tablename(email_user,username_user,password_user) VALUES('$email','$uname','$pass')";
     if(!mysqli_query($link,$sqlstr)){
         mysqli_close($link);
         header("Location: ../index.php?msg=fail");
