@@ -34,8 +34,7 @@
         exit;
     }
 
-    // header("Location: ./writeLog.php");
-    header("Location: ../index.php");
+    header("Location: ./writeLog.php");
     exit;
 
 ?>

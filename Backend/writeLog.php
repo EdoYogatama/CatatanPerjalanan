@@ -4,14 +4,13 @@
     if(isset($_SESSION['idx'])){
         $login = true;
     }
-    require("connection.php");
+    require("conection.php");
     $link = connect();
     $id = $_SESSION['idx'];
-    $log = "User telah berhasil mengupload foto";
-    $datetime = date("Y-m-d").time("h:i:sa");
+    $log = $_SESSION['uname']." telah berhasil mengupload foto";
+    $datetime = date('Y-m-d H:i:s');
     $tablename = "user_log";
-
-    $sqlstr = "INSERT INTO $tablename(id_user_log, log, date) VALUES($id, $log, $datetime)";
+    $sqlstr = "INSERT INTO $tablename(id_user_log, catat, tanggal) VALUES($id, '$log', '$datetime')";
     // $query = mysqli_query($link, $sqlstr);
     // if(!$query){
     //     printf("Error: %s\n", mysqli_error($link));

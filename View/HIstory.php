@@ -28,7 +28,7 @@
             <?php
                     if($login){
                 ?>
-                    <button class="btn btn-primary" onclick="location.href='Backend/signout.php';">Sign Out</button>
+                    <button class="btn btn-primary" onclick="location.href='../Backend/signout.php';">Sign Out</button>
                 <?php
                     } else {
                 ?>
@@ -69,8 +69,8 @@
                         <tr>
                                 <td><?php echo $num++; ?></td>
                                 <td><?php echo $_SESSION['uname']; ?></td>
-                                <td><?php echo $data['log']; ?></td>
-                                <td><?php echo $data['date']; ?></td>
+                                <td><?php echo $data['catat']; ?></td>
+                                <td><?php echo $data['tanggal']; ?></td>
                         </tr>
                         <?php } 
                             mysqli_close($link);

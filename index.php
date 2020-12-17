@@ -64,7 +64,7 @@
                             echo "Fail Creating Folder";
                         } else if($msg == "upfail"){
                             echo "Failed to Upload";
-                        } else if($msg == up){
+                        } else if($msg == "up"){
                             echo "Upload Success";
                         }
                     }

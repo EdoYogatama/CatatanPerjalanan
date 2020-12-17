@@ -29,7 +29,7 @@
             <?php
                     if($login){
                 ?>
-                    <button class="btn btn-primary" onclick="location.href='Backend/signout.php';">Sign Out</button>
+                    <button class="btn btn-primary" onclick="location.href='../Backend/signout.php';">Sign Out</button>
                 <?php
                     } else {
                 ?>
