@@ -66,6 +66,10 @@
                             echo "Failed to Upload";
                         } else if($msg == "up"){
                             echo "Upload Success";
+                        } else if($msg == "notimg"){
+                            echo "Is it an image?";
+                        } else if($msg == "notext"){
+                            echo "File not supported";
                         }
                     }
                 ?>

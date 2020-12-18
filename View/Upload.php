@@ -40,7 +40,7 @@
         </header>
     </div>
     <section class="form-group flex-centered">
-        <form name="loginform" action="../Backend/upload.php" method="POST" onsubmit="return validating()">
+        <form name="loginform" action="../Backend/upload.php" method="POST" onsubmit="return validating()" enctype="multipart/form-data">
             <label class="form-label" for="foto">Image</label>
             <input class="form-input" type="file" name="foto" id="foto"> <br>
             <input class="btn btn-primary" type="submit" value="Upload">
